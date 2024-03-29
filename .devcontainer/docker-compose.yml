@@ -1,0 +1,12 @@
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # echo ${USER}
+        - USER=${USER}
+        # Configure git
+        - GIT_NAME=Jose Lopes
+        - GIT_EMAIL=pedro.fraiao2@gmail.com
+    command: /bin/sh -c "while sleep 1000; do :; done"
